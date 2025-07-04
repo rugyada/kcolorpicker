@@ -1,6 +1,6 @@
 Name:		%{_lib}kColorPicker
 Version:	0.3.1
-Release:	1
+Release:	3
 Summary:	Qt based Color Picker with popup menu
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -15,7 +15,7 @@ BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6Widgets)
 
-%rename %name-Qt6
+%rename kcolorpicker
 
 %description
 QToolButton with color popup menu with lets you select a color. The
@@ -33,10 +33,11 @@ Requires: %name = %version
 %files
 %doc README.md
 %license LICENSE
-%{_libdir}/*
+%{_libdir}/libkColorPicker.so*
+%{_prefix}/lib/debug/*
 
 %files devel
 %{_includedir}/*
-%{_prefix}/lib/debug/*
 %{_libdir}/cmake/*
+%{_libdir}/libkColorPicker.so*
 
